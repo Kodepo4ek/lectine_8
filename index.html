@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lection-8</title>
+</head>
+<body>
+	<h5>Задание: 
+		<p>
+			Привет. У меня для вас несколько заданий) <br><br>
+
+1. Написать функцию odd, которая принимает массив чисел и возвращает массив с нечетными значениями.<br><br>
+
+2. Написать функцию even, которая делает все тож самое, но возвращает массив с четными значениями.<br><br>
+
+3*. И на смекалку. У нас есть многомерный массив чисел, количество вложенностей произвольное, мы его не знаем. Нужно написать функцию flat, которая вернет одномерный массив из всех чисел.
+		</p>
+</h5>
+<script>
+	function odd ( array ) {
+		var resultArray = [];
+		for ( var elem of array ) {
+			if ( elem % 2 !=0  ) {
+				resultArray.push(elem);
+			}
+		}
+		return resultArray;
+	}
+	
+function even ( array ) {
+		var resultArray = [];
+		for ( var elem of array ) {
+			if ( elem % 2 ==0  ) {
+				resultArray.push(elem);
+			}
+		}
+		return resultArray;
+	}
+function flats ( array ) {
+		var resultArray = array.flat(Infinity);
+		return resultArray;
+	}
+
+
+
+	console.log(odd([1,2,3,4,5,6,7,8,9]));
+
+	console.log(even([1,2,3,4,5,6,7,8,9]));
+
+	console.log(flats([1,2,[3,[4],5,[6,7,8,[9,10,[11,12]]]],[13,14],[15]]));
+</script>
+</body>
+</html>
