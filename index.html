@@ -17,37 +17,33 @@
 		</p>
 </h5>
 <script>
-	function odd ( array ) {
-		var resultArray = [];
-		for ( var elem of array ) {
-			if ( elem % 2 !=0  ) {
-				resultArray.push(elem);
+	const ArrayOne = [1,2,3,4,5,6,7,8,9,10];
+
+	const EvenNumber = function (array){
+		return array.filter(function(elem){
+			//console.log(!(elem % 2));
+			if (!(elem % 2)) {
+
+				return elem;
 			}
-		}
-		return resultArray;
+		});
 	}
-	
-function even ( array ) {
-		var resultArray = [];
-		for ( var elem of array ) {
-			if ( elem % 2 ==0  ) {
-				resultArray.push(elem);
+	const oddNumber = function (array){
+		return array.filter(function(elem){
+			//console.log((elem % 2));
+			if (elem % 2) {
+
+				return elem;
 			}
-		}
-		return resultArray;
-	}
-function flats ( array ) {
-		var resultArray = array.flat(Infinity);
-		return resultArray;
+		});
 	}
 
+	const mnogMasiv = [1,2,3,[4,5,6,[7,8,9]],[8,9,10,11],[12,13,14,15,[16,17,[18,19,20]]]];
 
+	console.log(mnogMasiv.toString().split(',').map(Number));
 
-	console.log(odd([1,2,3,4,5,6,7,8,9]));
-
-	console.log(even([1,2,3,4,5,6,7,8,9]));
-
-	console.log(flats([1,2,[3,[4],5,[6,7,8,[9,10,[11,12]]]],[13,14],[15]]));
+	console.log(EvenNumber(ArrayOne));
+	console.log(oddNumber(ArrayOne));
 </script>
 </body>
 </html>
